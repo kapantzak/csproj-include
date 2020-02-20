@@ -35,11 +35,11 @@ namespace csproj_include
                             p = new Project(projectFullPath, glob, null);
 
                         if (p != null)
-                        {                            
+                        {
                             items.ForEach(x =>
-                            {
-                                p.AddItem(x.itemType, x.unevaluatedInclude, x.metadata);
-                                Console.WriteLine($"Included {x.unevaluatedInclude}");
+                            {                                
+                                p.AddItemFast(x.itemType, x.unevaluatedInclude, x.metadata);
+                                Console.WriteLine($"--> Included {x.unevaluatedInclude}");
                             });
                             p.Save();
                             Console.WriteLine("Success");

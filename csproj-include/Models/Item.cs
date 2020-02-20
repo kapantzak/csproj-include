@@ -10,6 +10,6 @@ namespace csproj_include.Models
     {
         public string itemType { get; set; }
         public string unevaluatedInclude { get; set; }
-        public IEnumerable<KeyValuePair<string, string>> metadata { get; set; }
+        public Dictionary<string, string> metadata { get; set; }
     }
 }
